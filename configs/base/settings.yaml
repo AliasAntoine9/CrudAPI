@@ -1,0 +1,4 @@
+---
+base:
+  database_type: "sqlite"
+  root_path: "/crud-api"

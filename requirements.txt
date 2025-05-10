@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+pydantic
+sqlalchemy
+requests
+pytest
+dynaconf
+tomli
+build
+wheel

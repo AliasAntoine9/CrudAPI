@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "crud-api"
+version= "0.0.1"
+description = "Une API géniale qui fait du CRUD"
+authors = [{ name = "Antoine ALIAS", email = "antoine.alias@anonymous.com" }]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Framework :: FastAPI",
+]
+license = "MIT"
+requires-python = ">=3.11"
+
+[project.scripts]
+crud-api = "crud_api.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["crud_api"]

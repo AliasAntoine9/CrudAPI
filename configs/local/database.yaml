@@ -1,0 +1,10 @@
+---
+local:
+  database:
+    postgresql:
+      host: "localhost"
+      port: 5432
+    sqlite:
+      host: "localhost"
+      port: 1234
+      database_filename: "crud_database.db"

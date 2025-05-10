@@ -1,0 +1,10 @@
+---
+base:
+  database:
+    postgresql:
+      drivername: "postgresql"
+      database: "cars"
+      schema: "cars"
+    sqlite:
+      drivername: "sqlite"
+      database: "cars"
