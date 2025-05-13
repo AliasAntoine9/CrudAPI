@@ -7,4 +7,4 @@ base:
       schema: "cars"
     sqlite:
       drivername: "sqlite"
-      database: "cars"
+      database: "crud_database.db"

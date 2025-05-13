@@ -7,4 +7,3 @@ local:
     sqlite:
       host: "localhost"
       port: 1234
-      database_filename: "crud_database.db"

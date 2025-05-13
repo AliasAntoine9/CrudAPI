@@ -33,7 +33,7 @@ class Configuration:
             if config_name != "password":
                 setattr(self, f"_{config_name}", value)
             else:
-                setattr(self, config_name, value.decode())
+                setattr(self, f"_{config_name}", SecretStr(value))
 
     @staticmethod
     def create_session(engine: Engine):
@@ -43,7 +43,7 @@ class Configuration:
         url = URL.create(
             drivername=self._drivername,
             username=self._username,
-            password=self._password,
+            password=self._password.get_secret_value(),
             host=self._host,
             database=self._database,
         )
