@@ -7,7 +7,7 @@ from sqlalchemy.orm import sessionmaker
 from crud_api import settings, logger
 
 
-class Configuration:
+class PostgresConfiguration:
     def __init__(self):
         self._database_type: str = settings.database_type
         self._drivername: Optional[str] = None
@@ -39,7 +39,7 @@ class Configuration:
     def create_session(engine: Engine):
         return sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
-    def create_engine(self) -> Engine:
+    def _create_engine(self) -> Engine:
         url = URL.create(
             drivername=self._drivername,
             username=self._username,

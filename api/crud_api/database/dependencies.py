@@ -3,10 +3,10 @@ from typing import Generator
 from sqlalchemy.orm import Session
 
 from crud_api import logger
-from crud_api.database.configuration import Configuration
+from crud_api.database.setup_configuration import SetupConfiguration
 
 
-database_configuration = Configuration()
+database_configuration = SetupConfiguration().setup()
 database_configuration.load_from_settings()
 
 ENGINE = database_configuration.create_engine()

@@ -5,5 +5,5 @@ local:
       host: "localhost"
       port: 5432
     sqlite:
-      host: "localhost"
+      host: ""
       port: 1234
