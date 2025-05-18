@@ -9,6 +9,6 @@ from crud_api.service.database import initialization
 router = APIRouter()
 
 
-@router.post("initialize-database")
+@router.post("initialize-database", tags=["Database"])
 def initialize_database(db: Session = Depends(get_db)) -> None:
     return initialization(db)

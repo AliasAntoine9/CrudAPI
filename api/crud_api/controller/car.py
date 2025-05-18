@@ -10,6 +10,6 @@ from crud_api.service.car import retrieve_car_specification
 router = APIRouter()
 
 
-@router.get("/car-specification", response_model=List[CarSpecification])
+@router.get("/car-specification", response_model=List[CarSpecification], tags=["Car"])
 def get_car_specification(request: Request, db: Session = Depends(get_db)) -> List[CarSpecification]:
     return retrieve_car_specification(db)

@@ -1,5 +1,5 @@
-swagger_tags = {
-    "name": "Car",
-    "name": "Bike",
-    "name": "Database"
-}
+swagger_tags = [
+    {"name": "Car"},
+    {"name": "Bike"},
+    {"name": "Database"},
+]

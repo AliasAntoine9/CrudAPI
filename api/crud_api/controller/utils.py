@@ -5,6 +5,9 @@ from fastapi.responses import HTMLResponse
 
 router = APIRouter()
 
+@router.get("/")
+async def root():
+    return "Hello World from CrudAPI"
 
 @router.get("/docs", include_in_schema=False)
 async def custom_swagger_ui_html():
