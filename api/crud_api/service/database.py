@@ -7,10 +7,10 @@ from crud_api import logger
 
 
 def initialization(db: Session) -> None:
-    with open(Path(__file__).parent.parent / "create_database/sql") as file:
+    with open(Path(__file__).parent.parent / "create_database/postgres") as file:
         create_database_query = file.read()
 
-    with open(Path(__file__).parent.parent / "feed_database/sql") as file:
+    with open(Path(__file__).parent.parent / "feed_database/postgres") as file:
         feed_database_query = file.read()
 
     try:
